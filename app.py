@@ -27,3 +27,12 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 st.dataframe(df, width=1500)
+
+
+G = nx.DiGraph()
+G.add_edges_from([(1, 2), (2, 3), (3, 4), (4, 1)])
+
+pos = nx.spring_layout(G)
+nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15, arrows=True)
+
+st.pyplot(plt)

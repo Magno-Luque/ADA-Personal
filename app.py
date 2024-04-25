@@ -24,13 +24,10 @@ page_bg_img = """
     </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
 st.dataframe(df, width=1500)
 
 
-# Crear un grafo bipartito de ejemplo
-G = nx.Graph()
+G = nx.DiGraph()
 G.add_nodes_from([1, 2, 3, 4], bipartite=0)  # Nodos del primer conjunto
 G.add_nodes_from(['A', 'B', 'C'], bipartite=1)  # Nodos del segundo conjunto
 G.add_edges_from([(1, 'A'), (2, 'A'), (3, 'B'), (4, 'C')])  # Conexiones entre los conjuntos

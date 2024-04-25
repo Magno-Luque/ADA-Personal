@@ -1,7 +1,8 @@
 import streamlit as st
 from PIL import Image
-import numpy as np
-
+import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
 st.set_page_config(
     page_title="Sismos en el Perú",
     page_icon="volcano",

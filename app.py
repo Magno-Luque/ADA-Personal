@@ -40,9 +40,14 @@ pos = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (4, 1), 'A': (1.5, 2), 'B': (2.5, 2),
 nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
 # Etiquetas de los niveles
-labels = {1: "Nivel 1", 2: "Nivel 2"}
-for level, label in labels.items():
-    plt.text(level + 0.1, 0.5, label, rotation=90, fontsize=12, verticalalignment='center')
+level_labels = {"Nivel 1": [1, 2, 3, 4], "Nivel 2": ['A', 'B', 'C']}
+level_positions = {}
+for level, nodes in level_labels.items():
+    y_pos = sum([pos[node][1] for node in nodes]) / len(nodes)  # Calcula la posición Y promedio de los nodos en el nivel
+    level_positions[level] = (0.5, y_pos)
+
+for level, position in level_positions.items():
+    plt.text(position[0], position[1], level, rotation=90, fontsize=12, verticalalignment='center', horizontalalignment='center')
 
 # Mostrar el grafo en Streamlit
 st.pyplot(plt)

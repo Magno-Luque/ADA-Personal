@@ -27,33 +27,45 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.dataframe(df, width=1500)
 
 
-G = nx.DiGraph()
-G.add_nodes_from([1, 2, 3, 4])  # Nodos del primer conjunto
-G.add_nodes_from(['A', 'B', 'C'])  # Nodos del segundo conjunto
-G.add_nodes_from(['A', 'B', 'C'])  # Nodos del segundo conjunto
+def mostrar_informacion_nodo(nodo):
+    # Define la información para cada nodo
+    informacion_nodos = {
+        'A': 'Información sobre el nodo A',
+        'B': 'Información sobre el nodo B',
+        'C': 'Información sobre el nodo C',
+        'D': 'Información sobre el nodo D'
+    }
+    return informacion_nodos.get(nodo, 'Información no disponible')
 
-G.add_edges_from([(1, 'A'), (2, 'A'), (3, 'B'), (4, 'C')])  # Conexiones entre los conjuntos
+def main():
+    grafo = {
+        'A': ['B', 'C'],
+        'B': ['A', 'C', 'D'],
+        'C': ['A', 'B', 'D'],
+        'D': ['B', 'C']
+    }
 
-# Dibujar el grafo
-pos = {1: (1, 2), 2: (2, 2), 3: (3, 2), 4: (4, 2), 'A': (1.5, 1), 'B': (2.5, 1), 'C': (3.5, 1)}  # Posiciones de los nodos
-nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
+    # Crear una visualización del grafo
+    G = nx.Graph(grafo)
+    pos = nx.spring_layout(G)
 
-# Etiquetas de los niveles
-level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4]}
-level_positions = {}
-for level, nodes in level_labels.items():
-    y_pos = sum([pos[node][1] for node in nodes]) / len(nodes)  # Calcula la posición Y promedio de los nodos en el nivel
-    level_positions[level] = (0.5, y_pos)
+    # Mostrar el grafo en Streamlit
+    st.title('Visualización de un Grafo')
+    st.write(nx.info(G))
 
-for level, position in level_positions.items():
-    plt.text(position[0], position[1], level, rotation=90, fontsize=12, verticalalignment='center', horizontalalignment='center')
+    # Dibujar el grafo
+    plt.figure(figsize=(8, 6))
+    nx.draw(G, pos, with_labels=True, node_size=2000, node_color='skyblue', font_size=12, font_weight='bold')
+    plt.title('Grafo')
+    st.pyplot()
 
-# Interacción: Mostrar información del nodo al hacer clic
-clicked_node = st.sidebar.selectbox("Selecciona un nodo", [str(node) for node in G.nodes()])
-if clicked_node:
-    st.sidebar.markdown(f"**Información del Nodo {clicked_node}:**")
-    # Aquí podrías agregar la información específica de cada nodo, por ejemplo:
-    st.sidebar.write(f"Tipo de nodo: {'Nivel 1' if clicked_node in level_labels['Nivel 1'] else 'Nivel 2'}")
+    # Interacción con los nodos
+    nodo_seleccionado = st.selectbox('Seleccione un nodo:', list(grafo.keys()))
 
-# Mostrar el grafo en Streamlit
-st.pyplot(plt)
+    if st.button('Mostrar información'):
+        info = mostrar_informacion_nodo(nodo_seleccionado)
+        st.write(f'Información sobre el nodo {nodo_seleccionado}:')
+        st.write(info)
+
+if __name__ == '__main__':
+    main()

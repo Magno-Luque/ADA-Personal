@@ -29,4 +29,4 @@ with tab1:
     st.markdown(f'<h1 style="color:{color}; font-family: Cooper Black, sans-serif;">..</h1>', unsafe_allow_html=True)
 
 with tab2:
-    print("hello")
+    st.print("hello")

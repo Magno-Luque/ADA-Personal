@@ -5,7 +5,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
 
-data= pd.read_csv("/CursosInformatica.csv")
+data= pd.read_csv("CursosInformatica.csv")
 
 st.set_page_config(
     page_title="register",

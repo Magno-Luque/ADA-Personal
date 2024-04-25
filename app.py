@@ -26,4 +26,4 @@ page_bg_img = """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-st.dataframe(df, width=2000)
+st.dataframe(df, width=1500)

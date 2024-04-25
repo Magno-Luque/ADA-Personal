@@ -33,7 +33,7 @@ G.add_nodes_from(['A', 'B', 'C'], bipartite=1)  # Nodos del segundo conjunto
 G.add_edges_from([(1, 'A'), (2, 'A'), (3, 'B'), (4, 'C')])  # Conexiones entre los conjuntos
 
 # Dibujar el grafo
-pos = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (4, 1), 'A': (1.5, 2), 'B': (2.5, 2), 'C': (3.5, 2)}  # Posiciones de los nodos
+pos = {1: (1, 2), 2: (2, 2), 3: (3, 2), 4: (4, 2), 'A': (1.5, 1), 'B': (2.5, 1), 'C': (3.5, 1)}  # Posiciones de los nodos
 nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
 # Etiquetas de los niveles

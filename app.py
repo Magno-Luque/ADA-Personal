@@ -9,7 +9,7 @@ df= pd.read_csv("CursosInformatica.csv")
 
 st.set_page_config(
     page_title="register",
-    page_icon="volcano",
+    page_icon="school",
     initial_sidebar_state="expanded",
 )
 

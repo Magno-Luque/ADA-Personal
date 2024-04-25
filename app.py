@@ -27,45 +27,20 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.dataframe(df, width=1500)
 
 
-def mostrar_informacion_nodo(nodo):
-    # Define la información para cada nodo
-    informacion_nodos = {
-        'A': 'Información sobre el nodo A',
-        'B': 'Información sobre el nodo B',
-        'C': 'Información sobre el nodo C',
-        'D': 'Información sobre el nodo D'
-    }
-    return informacion_nodos.get(nodo, 'Información no disponible')
+G = nx.DiGraph()
+G.add_nodes_from([1, 2, 3, 4])
+G.add_edges_from([(1, 2), (2, 3), (3, 4), (4, 1)])
 
-def main():
-    grafo = {
-        'A': ['B', 'C'],
-        'B': ['A', 'C', 'D'],
-        'C': ['A', 'B', 'D'],
-        'D': ['B', 'C']
-    }
+# Dibujar el grafo
+pos = nx.spring_layout(G)
+nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
-    # Crear una visualización del grafo
-    G = nx.Graph(grafo)
-    pos = nx.spring_layout(G)
+# Interacción: Mostrar información del nodo al hacer clic
+clicked_node = st.sidebar.selectbox("Selecciona un nodo", [str(node) for node in G.nodes()])
+if clicked_node:
+    st.sidebar.markdown(f"**Información del Nodo {clicked_node}:**")
+    # Aquí podrías agregar la información específica de cada nodo
+    st.sidebar.write(f"Tipo de nodo: {'Nivel 1' if clicked_node in level_labels['Nivel 1'] else 'Nivel 2'}")
 
-    # Mostrar el grafo en Streamlit
-    st.title('Visualización de un Grafo')
-    st.write(nx.info(G))
-
-    # Dibujar el grafo
-    plt.figure(figsize=(8, 6))
-    nx.draw(G, pos, with_labels=True, node_size=2000, node_color='skyblue', font_size=12, font_weight='bold')
-    plt.title('Grafo')
-    st.pyplot()
-
-    # Interacción con los nodos
-    nodo_seleccionado = st.selectbox('Seleccione un nodo:', list(grafo.keys()))
-
-    if st.button('Mostrar información'):
-        info = mostrar_informacion_nodo(nodo_seleccionado)
-        st.write(f'Información sobre el nodo {nodo_seleccionado}:')
-        st.write(info)
-
-if __name__ == '__main__':
-    main()
+# Mostrar el grafo en Streamlit
+st.pyplot(plt)

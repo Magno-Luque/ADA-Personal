@@ -5,9 +5,10 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
 
+data= pd.read_csv("/CursosInformatica.csv")
 
 st.set_page_config(
-    page_title="Sismos en el Perú",
+    page_title="register",
     page_icon="volcano",
     initial_sidebar_state="expanded",
 )
@@ -36,9 +37,3 @@ with tab1:
 with tab2:
     st.text("hello")
 
-    # Generar datos para el gráfico
-    x = np.linspace(0, 10, 100)
-    y = np.sin(x)
-
-    # Mostrar el gráfico en Streamlit
-    st.pyplot(plt.plot(x, y))

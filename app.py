@@ -26,14 +26,4 @@ page_bg_img = """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-# Añadimos un panel de control
-tab1, tab2, tab3 = st.tabs([":blue[**INICIO**]", ":blue[_**ANÁLISIS A NIVEL NACIONAL**_]", ":blue[_**ANÁLISIS A NIVEL DEPARTAMENTAL**_]"])
-
-with tab1:
-    font_style_cooper_black = 'font-family: "Cooper Black", sans-serif;';
-    color = '#ba55d3'  
-    st.markdown(f'<h1 style="color:{color}; font-family: Cooper Black, sans-serif;">..</h1>', unsafe_allow_html=True)
-
-with tab2:
-    st.text("hello")
-
+data.head()

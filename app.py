@@ -1,7 +1,5 @@
 import streamlit as st
 from PIL import Image
-import streamlit as st
-import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(
@@ -33,14 +31,10 @@ with tab1:
 
 with tab2:
     st.text("hello")
+
+    # Generar datos para el gráfico
     x = np.linspace(0, 10, 100)
     y = np.sin(x)
 
-    # Crear el gráfico
-    plt.plot(x, y)
-    plt.xlabel('X')
-    plt.ylabel('Y')
-    plt.title('Gráfico de ejemplo')
-
     # Mostrar el gráfico en Streamlit
-    st.pyplot()
+    st.pyplot(plt.plot(x, y))

@@ -49,5 +49,12 @@ for level, nodes in level_labels.items():
 for level, position in level_positions.items():
     plt.text(position[0], position[1], level, rotation=90, fontsize=12, verticalalignment='center', horizontalalignment='center')
 
+# Interacción: Mostrar información del nodo al hacer clic
+clicked_node = st.sidebar.selectbox("Selecciona un nodo", [str(node) for node in G.nodes()])
+if clicked_node:
+    st.sidebar.markdown(f"**Información del Nodo {clicked_node}:**")
+    # Aquí podrías agregar la información específica de cada nodo, por ejemplo:
+    st.sidebar.write(f"Tipo de nodo: {'Nivel 1' if clicked_node in level_labels['Nivel 1'] else 'Nivel 2'}")
+
 # Mostrar el grafo en Streamlit
 st.pyplot(plt)

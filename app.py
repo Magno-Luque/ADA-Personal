@@ -3,6 +3,9 @@ from PIL import Image
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
+import numpy as np
+
+
 st.set_page_config(
     page_title="Sismos en el Perú",
     page_icon="volcano",

@@ -29,13 +29,14 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.dataframe(df, width=1500)
 
 
+# Crear un grafo bipartito de ejemplo
 G = nx.Graph()
 G.add_nodes_from([1, 2, 3, 4], bipartite=0)  # Nodos del primer conjunto
 G.add_nodes_from(['A', 'B', 'C'], bipartite=1)  # Nodos del segundo conjunto
 G.add_edges_from([(1, 'A'), (2, 'A'), (3, 'B'), (4, 'C')])  # Conexiones entre los conjuntos
 
 # Dibujar el grafo
-pos = {1: (1, 3), 2: (2, 3), 3: (1, 1), 4: (2, 1), 'A': (1, 2), 'B': (2, 2), 'C': (3, 2)}  # Posiciones de los nodos
+pos = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (4, 1), 'A': (1.5, 2), 'B': (2.5, 2), 'C': (3.5, 2)}  # Posiciones de los nodos
 nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
 # Mostrar el grafo en Streamlit

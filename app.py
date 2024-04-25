@@ -5,7 +5,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
 
-data= pd.read_csv("CursosInformatica.csv")
+df= pd.read_csv("CursosInformatica.csv")
 
 st.set_page_config(
     page_title="register",
@@ -26,4 +26,4 @@ page_bg_img = """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-data.head()
+st.dataframe(df)

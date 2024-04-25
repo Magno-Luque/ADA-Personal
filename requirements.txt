@@ -9,4 +9,3 @@ Pillow
 openpyxl
 geopandas
 shapely
-matplotlib.pyplot

@@ -37,7 +37,7 @@ pos = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (4, 1), 'A': (1.5, 2), 'B': (2.5, 2),
 nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
 # Etiquetas de los niveles
-level_labels = {"Nivel 1": [1, 2, 3, 4], "Nivel 2": ['A', 'B', 'C']}
+level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4]}
 level_positions = {}
 for level, nodes in level_labels.items():
     y_pos = sum([pos[node][1] for node in nodes]) / len(nodes)  # Calcula la posición Y promedio de los nodos en el nivel

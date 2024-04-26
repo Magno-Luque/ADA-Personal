@@ -61,5 +61,16 @@ if clicked_node:
         st.sidebar.write("Información específica del Nodo:")
         # Aquí puedes agregar información específica sobre el nodo de Nivel 2
 
+
+level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4], "Nivel 3":['D','E']}
+level_positions = {}
+for level, nodes in level_labels.items():
+    y_pos = sum([pos[node][1] for node in nodes]) / len(nodes)  # Calcula la posición Y promedio de los nodos en el nivel
+    level_positions[level] = (0.5, y_pos)
+
+for level, position in level_positions.items():
+    plt.text(position[0], position[1], level, rotation=90, fontsize=12, verticalalignment='center', horizontalalignment='center')
+
+
 # Mostrar el grafo en Streamlit
 st.pyplot(plt)

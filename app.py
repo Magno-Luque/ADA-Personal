@@ -27,18 +27,20 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.dataframe(df, width=1500)
 
 
-# Crear un grafo bipartito dirigido de ejemplo
 G = nx.DiGraph()
-G.add_nodes_from([1, 2, 3, 4])  # Nodos del primer conjunto
-G.add_nodes_from(['A', 'B', 'C'])  # Nodos del segundo conjunto
-G.add_edges_from([(1, 'A'), (2, 'A'), (3, 'B'), (4, 'C')])  # Conexiones entre los conjuntos
+G.add_nodes_from([1, 2, 3, 4])  
+G.add_nodes_from(['A', 'B', 'C'])  
+G.add_nodes_from(['D', 'E'])  
+G.add_edges_from([(1, 'A'), (2, 'A'), (3, 'B'), (4, 'C')]) 
+G.add_edges_from([('A', 'D'), ('C', 'E')]) 
 
 # Dibujar el grafo
-pos = {1: (1, 2), 2: (2, 2), 3: (3, 2), 4: (4, 2), 'A': (1.5, 1), 'B': (2.5, 1), 'C': (3.5, 1)}  # Posiciones de los nodos
+pos = {1: (1, 2), 2: (2, 2), 3: (3, 2), 4: (4, 2), 'A': (1.5, 1), 'B': (2.5, 1),
+       'C': (3.5, 1), 'D':(2, 3), 'E':(3, 3)}  
 nx.draw(G, pos, with_labels=True, arrows=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
 # Etiquetas de los niveles
-level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4]}
+level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4], "Nivel 3":['D','E']}
 level_positions = {}
 for level, nodes in level_labels.items():
     y_pos = sum([pos[node][1] for node in nodes]) / len(nodes)  # Calcula la posición Y promedio de los nodos en el nivel

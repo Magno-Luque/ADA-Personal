@@ -31,7 +31,8 @@ G = nx.DiGraph()
 G.add_nodes_from([1, 2, 3, 4])  
 G.add_nodes_from(['A', 'B', 'C'])  
 G.add_nodes_from(['D', 'E'])  
-
+G.add_edges_from([(1, 'A'), (2, 'A'), (3, 'B'), (4, 'C')]) 
+G.add_edges_from([('A', 'D'), ('C', 'E')]) 
 
 # Dibujar el grafo
 pos = {1: (1, 2), 2: (2, 2), 3: (3, 2), 4: (4, 2), 'A': (1.5, 1), 'B': (2.5, 1),
@@ -62,10 +63,12 @@ if clicked_node:
 st.pyplot(plt)
 
 ###########################
+
 asigCodAcro = {}
 asigAcroCod = {}
 nombresNivel = {}
 cursosNivel = {}
+posic = {}
 
 for index, row in df.iterrows():
     asigCodAcro[row['Código']] = row['Acrónimo']
@@ -85,6 +88,15 @@ for nombre, ciclo in nombresNivel.items():
             dicTem.append(row['Acrónimo'])
     cursosNivel[nombre + ' CICLO'] = dicTem 
 
+for contador, (i, j) in enumerate(cursosNivel.items()):
+  c = 1
+  if contador % 2==0:
+      c += 0.5
+  for k in j:
+    pos[k] = (c, 10 - contador)
+    c +=1
+
+nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
 posicionNivel = {}
 for nivel, nodos in cursosNivel.items():

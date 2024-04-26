@@ -91,7 +91,7 @@ G.add_edges_from(listAristas)
 
 
 plt.figure(figsize=(17, 27))
-nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color=aristasColors,width=5, linewidths=1, font_size=20)
+nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color='black',width=5, linewidths=1, font_size=20)
 
 posicionNivel = {}
 for nivel, nodos in cursosNivel.items():

@@ -104,7 +104,7 @@ for nivel, posicion in posicionNivel.items():
 st.pyplot(plt)
 
 #################
-
+a = [1,2,3,4,5]
 info_por_ciclo = {
     'PRIMER CICLO': 'Información específica del Nodo para el primer ciclo',
     'SEGUNDO CICLO': 'Información específica del Nodo para el segundo ciclo',
@@ -120,9 +120,9 @@ info_por_ciclo = {
 
 nivelPresionado = st.sidebar.selectbox("Selecciona el nivel", nombresCiclo)
 if nivelPresionado:
-    st.sidebar.markdown(f"**Información sobre {nivelPresionado}:**")
+    st.sidebar.markdown(f"**Información sobre el {nivelPresionado}:**")
     if nivelPresionado in info_por_ciclo:
         info_especifica = info_por_ciclo[nivelPresionado]
-        st.sidebar.write(info_especifica)
+        st.sidebar.write(info_especifica,"dsds")
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")

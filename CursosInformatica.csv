@@ -1,61 +1,61 @@
-Ciclo,Código,Cursos,Codigo Requisito,Requisito,Sede,Créditos,Cred/ciclo
-1,C0090,Filosofía,Ninguno,Ninguno,La Molina,3,
-1,C0613,Comunicación y redacción 1,Ninguno,Ninguno,La Molina,3,
-1,C0659,Cálculo diferencial para ingeniería,Ninguno,Ninguno,La Molina,4,
-1,C0737,Álgebra matricial y geometría analítica,Ninguno,Ninguno,La Molina,3,
-1,C0201,Química general,Ninguno,Ninguno,La Molina,5,
-1,C8189,Introducción a la ingeniería informática,Ninguno,Ninguno,La Molina,2,20
-2,C0614,Comunicación y redacción 2,C0613,Comunicación y redacción 1,La Molina,3,
-2,C0657,Cálculo integral para ingeniería,C0659,Cálculo diferencial para ingeniería,La Molina,4,
-2,C0622,Física para ingeniería 1,Ninguno,Ninguno,La Molina,5,
-2,C8190,Biología para ingeniería,Ninguno,Ninguno,La Molina,5,
-2,C8191,Procesos de innovación en ingeniería,Ninguno,Ninguno,La Molina,2,
-2,C0667,Fundamentos de programación,Ninguno,Ninguno,La Molina,3,22
-3,C0741,Cálculo vectorial para ingeniería,C0657,Cálculo integral para ingeniería,Central,4,
-3,C0742,Física para ingeniería 2,C0622,Física para ingeniería 1,Central,5,
-3,C0208,Química orgánica/Química computacional,C0201,Química general,Central,5,
-3,C0513,Ciencias sociales,C0614,Comunicación y redacción 2,Central,2,
-3,C8274,Programación orientada a objetos,C0667,Fundamentos de programación,Central,3,
-3,C8275,Estructuras discretas,Ninguno,Ninguno,Central,3,22
-4,C0743,Ecuaciones diferenciales,C0741,Cálculo vectorial para ingeniería,Central,4,
-4,C0750/ C1127,Programación avanzada,C0667,Fundamentos de programación,Central,3,
-4,C0745,Física para ingeniería 3,C0742,Física para ingeniería 2,Central,5,
-4,C0503,Estadística y probabilidades,C0657,Cálculo integral para ingeniería,Central,4,
-4,C8276,Organización y arquitectura de computadores,40 CRÉDITOS,,Central,3,
-4,C8277,Algoritmos y estructura de datos,C8275,Estructuras discretas,Central,3,22
-5,C0679,Fundamentos de diseño,C8191,Procesos de innovación en ingeniería,Central,3,
-5,C8425, Inglés 1,Ninguno,Ninguno,Central,2,
-5,C8278,Análisis y diseño de algoritmos,C8277,Algoritmos y estructura de datos,Central,4,
-5,C8279,Sistemas operativos,C8276,Organización y arquitectura de computadores,Miraflores,4,
-5,C8280,Comunicación de datos y redes,40 CRÉDITOS,,Central,4,
-5,C8281,Introducción a machine learning,C0503,Estadística y probabilidades,Central,4,21
-6,C1330,Proyectos de ingeniería 1,C0679,Fundamentos de diseño,Central,5,
-6,C8282,Bases de datos,C8277,Algoritmos y estructura de datos,Central,4,
-6,C8283 ,Implementación de lenguajes de programación,C8279,Sistemas operativos,Central,4,
-6,C8284,Criptografía y seguridad informática,C8279,Sistemas operativos,Central,3,
-6,C0359,Sistemas de información,80 creditos,,Central,3,
-6,C8445,Asignatura electiva I,Ninguno,Ninguno,Central,3,22
-7,C1335,Desarrollo profesional 1,120 creditos,,Central,2,
-7,C8426, Inglés  2,C8425, Inglés 1,Central,2,
-7,C8285,Human-centered design,C0359,Sistemas de información,,4,
-7,C8286,Computación paralela y distribuida,C8279,Sistemas operativos,,4,
-7,C8287,Ingeniería de software,C0359,Sistemas de información,Miraflores,4,
-7,C8446,Asignatura electiva II,Ninguno,Ninguno,Central,3,19
-8,C1343,Proyectos de ingeniería 2,C1330,Proyectos de ingeniería 1,,5,
-8,C1342,Desarrollo profesional 2,C1335,Desarrollo profesional 1,,2,
-8,C8427, Inglés 3,C8426, Inglés  2,Central,2,
-8,C8288,Desarrollo de sistemas web,C8287,Ingeniería de software,,4,
-8,C8289,Visualización,C8285,Human-centered design,,4,
-8,C8453,Asignatura electiva III,Ninguno,Ninguno,Central,3,20
-9,C8290,Diseño de negocios en ingeniería,C1343,Proyectos de ingeniería 2,,2,
-9,C0772,Ética,Filosofía /150 créditos,,,2,
-9,C8269,Tesis 1,150 créditos aprobados,,,5,
-9,C8428, Inglés 4,C8427, Inglés 3,,2,
-9,C8291,Desarrollo de sistemas móviles,C8287,Ingeniería de software,,4,
-9,C8458,Asignatura electiva IV,Ninguno,Ninguno,Central,3,18
-10,C8272,Normas y regulaciones en ingeniería,C8290,Diseño de negocios en ingeniería,,2,
-10,C8271,Tesis 2,C8269,Tesis 1,,5,
-10,C8292,Temas avanzados de seguridad informática,C8284,Criptografía y seguridad informática,,4,
-10,C8293 ,Derecho informático,150 CRÉDITOS,,,2,
-10,,Asignatura electiva V,Ninguno,Ninguno,,3,
-10,,Asignatura electiva VI,Ninguno,Ninguno,,3,19
+Ciclo,Código,Cursos,Codigo Requisito,Requisito,Sede,Créditos,Cred/ciclo,Acronimo
+1,C0090,Filosofía,Ninguno,Ninguno,La Molina,3,,F
+1,C0613,Comunicación y redacción 1,Ninguno,Ninguno,La Molina,3,,CR1
+1,C0659,Cálculo diferencial para ingeniería,Ninguno,Ninguno,La Molina,4,,CDI
+1,C0737,Álgebra matricial y geometría analítica,Ninguno,Ninguno,La Molina,3,,AMGA
+1,C0201,Química general,Ninguno,Ninguno,La Molina,5,,QG
+1,C8189,Introducción a la ingeniería informática,Ninguno,Ninguno,La Molina,2,20.0,III
+2,C0614,Comunicación y redacción 2,C0613,Comunicación y redacción 1,La Molina,3,,CR2
+2,C0657,Cálculo integral para ingeniería,C0659,Cálculo diferencial para ingeniería,La Molina,4,,CII
+2,C0622,Física para ingeniería 1,Ninguno,Ninguno,La Molina,5,,FI1
+2,C8190,Biología para ingeniería,Ninguno,Ninguno,La Molina,5,,BI
+2,C8191,Procesos de innovación en ingeniería,Ninguno,Ninguno,La Molina,2,,PII
+2,C0667,Fundamentos de programación,Ninguno,Ninguno,La Molina,3,22.0,FP
+3,C0741,Cálculo vectorial para ingeniería,C0657,Cálculo integral para ingeniería,Central,4,,CVI
+3,C0742,Física para ingeniería 2,C0622,Física para ingeniería 1,Central,5,,FI2
+3,C0208,Química orgánica/Química computacional,C0201,Química general,Central,5,,QO/QCS
+3,C0513,Ciencias sociales,C0614,Comunicación y redacción 2,Central,2,,CS
+3,C8274,Programación orientada a objetos,C0667,Fundamentos de programación,Central,3,,POO
+3,C8275,Estructuras discretas,Ninguno,Ninguno,Central,3,22.0,EsD
+4,C0743,Ecuaciones diferenciales,C0741,Cálculo vectorial para ingeniería,Central,4,,EcD
+4,C0750/ C1127,Programación avanzada,C0667,Fundamentos de programación,Central,3,,PA
+4,C0745,Física para ingeniería 3,C0742,Física para ingeniería 2,Central,5,,FI3
+4,C0503,Estadística y probabilidades,C0657,Cálculo integral para ingeniería,Central,4,,EP
+4,C8276,Organización y arquitectura de computadores,40 CRÉDITOS,,Central,3,,OAC
+4,C8277,Algoritmos y estructura de datos,C8275,Estructuras discretas,Central,3,22.0,AED
+5,C0679,Fundamentos de diseño,C8191,Procesos de innovación en ingeniería,Central,3,,FD
+5,C8425, Inglés 1,Ninguno,Ninguno,Central,2,,I1
+5,C8278,Análisis y diseño de algoritmos,C8277,Algoritmos y estructura de datos,Central,4,,ADA
+5,C8279,Sistemas operativos,C8276,Organización y arquitectura de computadores,Miraflores,4,,SO
+5,C8280,Comunicación de datos y redes,40 CRÉDITOS,,Central,4,,CDR
+5,C8281,Introducción a machine learning,C0503,Estadística y probabilidades,Central,4,21.0,IML
+6,C1330,Proyectos de ingeniería 1,C0679,Fundamentos de diseño,Central,5,,PI1
+6,C8282,Bases de datos,C8277,Algoritmos y estructura de datos,Central,4,,BD
+6,C8283 ,Implementación de lenguajes de programación,C8279,Sistemas operativos,Central,4,,ILP
+6,C8284,Criptografía y seguridad informática,C8279,Sistemas operativos,Central,3,,CSI
+6,C0359,Sistemas de información,80 creditos,,Central,3,,SI
+6,C8445,Asignatura electiva I,Ninguno,Ninguno,Central,3,22.0,AE1
+7,C1335,Desarrollo profesional 1,120 creditos,,Central,2,,DP1
+7,C8426, Inglés  2,C8425, Inglés 1,Central,2,,I2
+7,C8285,Human-centered design,C0359,Sistemas de información,,4,,HCD
+7,C8286,Computación paralela y distribuida,C8279,Sistemas operativos,,4,,CPD
+7,C8287,Ingeniería de software,C0359,Sistemas de información,Miraflores,4,,IS
+7,C8446,Asignatura electiva II,Ninguno,Ninguno,Central,3,19.0,AE2
+8,C1343,Proyectos de ingeniería 2,C1330,Proyectos de ingeniería 1,,5,,PI2
+8,C1342,Desarrollo profesional 2,C1335,Desarrollo profesional 1,,2,,DP2
+8,C8427, Inglés 3,C8426, Inglés  2,Central,2,,I3
+8,C8288,Desarrollo de sistemas web,C8287,Ingeniería de software,,4,,DSW
+8,C8289,Visualización,C8285,Human-centered design,,4,,V
+8,C8453,Asignatura electiva III,Ninguno,Ninguno,Central,3,20.0,AE3
+9,C8290,Diseño de negocios en ingeniería,C1343,Proyectos de ingeniería 2,,2,,DNI
+9,C0772,Ética,Filosofía /150 créditos,,,2,,E
+9,C8269,Tesis 1,150 créditos aprobados,,,5,,T1
+9,C8428, Inglés 4,C8427, Inglés 3,,2,,I4
+9,C8291,Desarrollo de sistemas móviles,C8287,Ingeniería de software,,4,,DSM
+9,C8458,Asignatura electiva IV,Ninguno,Ninguno,Central,3,18.0,AE4
+10,C8272,Normas y regulaciones en ingeniería,C8290,Diseño de negocios en ingeniería,,2,,NRI
+10,C8271,Tesis 2,C8269,Tesis 1,,5,,T2
+10,C8292,Temas avanzados de seguridad informática,C8284,Criptografía y seguridad informática,,4,,TASI
+10,C8293 ,Derecho informático,150 CRÉDITOS,,,2,,DI
+10,,Asignatura electiva V,Ninguno,Ninguno,,3,,AE5
+10,,Asignatura electiva VI,Ninguno,Ninguno,,3,19.0,AE6

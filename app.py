@@ -121,8 +121,9 @@ info_por_ciclo = {
 nivelPresionado = st.sidebar.selectbox("Selecciona el nivel", nombresCiclo)
 if nivelPresionado:
     st.sidebar.markdown(f"**Información sobre el {nivelPresionado}:**")
-    if nivelPresionado in info_por_ciclo:
-        info_especifica = info_por_ciclo[nivelPresionado]
-        st.sidebar.write(info_especifica,"dsds")
+    if nivelPresionado in cursosNivel:
+        cursos = cursosNivel[nivelPresionado]
+        for curso in cursos:
+            st.sidebar.write(curso)
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")

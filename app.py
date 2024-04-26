@@ -93,10 +93,23 @@ for contador, (i, j) in enumerate(cursosNivel.items()):
   if contador % 2==0:
       c += 0.5
   for k in j:
-    pos[k] = (c, 10 - contador)
+    posic[k] = (c, 20 - contador*2)
     c +=1
 
-nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
+G = nx.DiGraph()
+G.add_nodes_from(['F', 'CR1', 'CDI', 'AMGA', 'QG', 'III'])
+G.add_nodes_from(['CR2', 'CII', 'FI1', 'BI', 'PII', 'FP'])
+G.add_nodes_from(['CVI', 'FI2', 'QO/QCS', 'CS', 'POO', 'EsD'])
+G.add_nodes_from(['EcD', 'PA', 'FI3', 'EP', 'OAC', 'AED'])
+G.add_nodes_from(['FD', 'I1', 'ADA', 'SO', 'CDR', 'IML'])
+G.add_nodes_from(['PI1', 'BD', 'ILP', 'CSI', 'SI', 'AE1'])
+G.add_nodes_from(['DP1', 'I2', 'HCD', 'CPD', 'IS', 'AE2'])
+G.add_nodes_from(['PI2', 'DP2', 'I3', 'DSW', 'V', 'AE3'])
+G.add_nodes_from(['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'])
+G.add_nodes_from(['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6'])
+
+plt.figure(figsize=(17, 27))
+nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=2500, edge_color='black', linewidths=1, font_size=12)
 
 posicionNivel = {}
 for nivel, nodos in cursosNivel.items():

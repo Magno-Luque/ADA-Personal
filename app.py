@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import networkx as nx
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 usuarios = {
@@ -10,11 +11,6 @@ usuarios = {
 }
 
 def main():
-    st.set_page_config(
-        page_title="register",
-        page_icon="school",
-        initial_sidebar_state="expanded",
-    )
 
     if not st.session_state.get("logged_in", False):
         st.markdown("<h2 style='text-align: center;'>INICIAR SESIÓN</h2>", unsafe_allow_html=True)
@@ -43,6 +39,11 @@ def verify_user(username, password):
     return False
 
 def show_authenticated_content():
+    st.set_page_config(
+        page_title="register",
+        page_icon="school",
+        initial_sidebar_state="expanded",
+    )
     st.title(f"Bienvenido, {st.session_state.username}!")
     
     def download(archivo):

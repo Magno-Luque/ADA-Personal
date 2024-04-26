@@ -125,8 +125,15 @@ if nivelPresionado:
         cursos = cursosNivel[nivelPresionado]
         for curso in cursos:
             curso_nombre = {}
+            tipo_nombre = {}
             for index, row in df.iterrows():
                 curso_nombre[row['Acrónimo']] = row['Nombre']
+                tipo_nombre[row['Acrónimo']] = row['Tipo']
+
             st.sidebar.write(curso, ":", curso_nombre[curso] )
+            
+            st.sidebar.write("Los cursos obligatorios son: ")
+            st.sidebar.write("- ", tipo_nombre[curso])
+
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")

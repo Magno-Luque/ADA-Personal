@@ -139,7 +139,8 @@ if nivelPresionado:
                 cred_nombre[row['Acrónimo']] = row['Créditos']
                 req_nombre[row['Acrónimo']] = row['Nombre Requisito']
 
-            st.sidebar.write(f"**{curso,": ",curso_nombre[curso]}**")
+            st.sidebar.write(f"**{curso}:** {nombre}")
+            st.sidebar.write(f"**{curso}: {curso_nombre[curso]}**")
             st.sidebar.write(curso, ":", curso_nombre[curso])
             st.sidebar.write("- Tipo: ", tipo_nombre[curso])
             st.sidebar.write("- Sede: ", sede_nombre[curso])

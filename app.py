@@ -26,7 +26,7 @@ page_bg_img = """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.dataframe(df, width=1500)
 
-
+#################
 asigCodAcro = {}
 asigAcroCod = {}
 nombresNivel = {}
@@ -103,12 +103,27 @@ for nivel, posicion in posicionNivel.items():
 
 st.pyplot(plt)
 
+#################
+
+info_por_ciclo = {
+    'PRIMER CICLO': 'Información específica del Nodo para el primer ciclo',
+    'SEGUNDO CICLO': 'Información específica del Nodo para el segundo ciclo',
+    'TERCER CICLO': 'Información específica del Nodo para el tercer ciclo',
+    'CUARTO CICLO': 'Información específica del Nodo para el cuarto ciclo',
+    'QUINTO CICLO': 'Información específica del Nodo para el quinto ciclo',
+    'SEXTO CICLO': 'Información específica del Nodo para el sexto ciclo',
+    'SÉTIMO CICLO': 'Información específica del Nodo para el séptimo ciclo',
+    'OCTAVO CICLO': 'Información específica del Nodo para el octavo ciclo',
+    'NOVENO CICLO': 'Información específica del Nodo para el noveno ciclo',
+    'DÉCIMO CICLO': 'Información específica del Nodo para el décimo ciclo'
+}
 
 nivelPresionado = st.sidebar.selectbox("Selecciona un ciclo", nombresCiclo)
 if nivelPresionado:
     st.sidebar.markdown(f"**Información del Nodo {nivelPresionado}:**")
-    if nivelPresionado in level_labels['Nivel 1']:
-        st.sidebar.write("Información específica del Nodo:")
-    elif nivelPresionado in level_labels['Nivel 2']:
-        st.sidebar.write("Información específica del Nodo:")
+    if nivelPresionado in info_por_ciclo:
+        info_especifica = info_por_ciclo[nivelPresionado]
+        st.sidebar.write(info_especifica)
+    else:
+        st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")
 st.pyplot(plt)

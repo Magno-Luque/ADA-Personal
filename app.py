@@ -37,7 +37,7 @@ G.add_edges_from([('A', 'D'), ('C', 'E')])
 # Dibujar el grafo
 pos = {1: (1, 2), 2: (2, 2), 3: (3, 2), 4: (4, 2), 'A': (1.5, 1), 'B': (2.5, 1),
        'C': (3.5, 1), 'D':(2, 3), 'E':(3, 3)}  
-nx.draw(G, pos, with_labels=True, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
+nx.draw(G, pos, node_color='skyblue', node_size=2000, edge_color='black', linewidths=1, font_size=15)
 
 # Etiquetas de los niveles
 level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4], "Nivel 3":['D','E']}

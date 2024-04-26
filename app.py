@@ -117,6 +117,6 @@ for nivel, nodos in cursosNivel.items():
     posicionNivel[nivel] = (0.5, y_pos)
 
 for nivel, posicion in posicionNivel.items():
-    plt.text(posicion[0], posicion[1], nivel, rotation=90, fontsize=28, verticalalignment='center', horizontalalignment='center')
+    plt.text(posicion[0], posicion[1], nivel, rotation=90, fontsize=18, verticalalignment='center', horizontalalignment='center')
 
 st.pyplot(plt)

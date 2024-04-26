@@ -55,7 +55,7 @@ def show_authenticated_content():
 
    
         G = nx.DiGraph()
-        G.add_node(codigo)
+
         flag = False
 
         while flag == False:

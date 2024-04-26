@@ -124,10 +124,9 @@ if nivelPresionado:
     if nivelPresionado in cursosNivel:
         cursos = cursosNivel[nivelPresionado]
         curso_nombre = {}
-        for index, row in df.iterrows():
-            curso_nombre[row['curso']] = row['Nombre']
+        
         for curso in cursos:
             nombre = curso_nombre[curso]
-            st.sidebar.write(curso, ":", nombre)
+            st.sidebar.write(curso)
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")

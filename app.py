@@ -60,7 +60,7 @@ if clicked_node:
     elif clicked_node in level_labels['Nivel 2']:
         st.sidebar.write("Información específica del Nodo:")
         # Aquí puedes agregar información específica sobre el nodo de Nivel 2
-
+st.pyplot(plt)
 
 level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4], "Nivel 3":['D','E']}
 level_positions = {}

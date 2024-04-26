@@ -141,11 +141,10 @@ if nivelPresionado:
 
             st.sidebar.write(f"**{curso}: {curso_nombre[curso]}**")
             st.sidebar.write(f"- Tipo: *{tipo_nombre[curso]}*")
-            st.sidebar.write("- Tipo: ", tipo_nombre[curso])
-            st.sidebar.write("- Sede: ", sede_nombre[curso])
-            st.sidebar.write("- Modalidad: ", modalidad_nombre[curso])
-            st.sidebar.write("- N° Céditos: ", cred_nombre[curso])
-            st.sidebar.write("- Requisito: ", req_nombre[curso])
+            st.sidebar.write(f"- Sede: *{sede_nombre[curso]}*")
+            st.sidebar.write(f"- Modalidad: *{modalidad_nombre[curso]}*")
+            st.sidebar.write(f"- N° Céditos: *{cred_nombre[curso]}*")
+            st.sidebar.write(f"- Requisito: *{req_nombre[curso]}*")
 
 
     else:

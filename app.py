@@ -62,6 +62,20 @@ if clicked_node:
         # Aquí puedes agregar información específica sobre el nodo de Nivel 2
 st.pyplot(plt)
 
+###########################
+
+niveles = {'PRIMER CICLO': ['F', 'CR1', 'CDI', 'AMGA', 'QG', 'III'],
+ 'SEGUNDO CICLO': ['CR2', 'CII', 'FI1', 'BI', 'PII', 'FP'],
+ 'TERCER CICLO': ['CVI', 'FI2', 'QO/QCS', 'CS', 'POO', 'EsD'],
+ 'CUARTO CICLO': ['EcD', 'PA', 'FI3', 'EP', 'OAC', 'AED'],
+ 'QUINTO CICLO': ['FD', 'I1', 'ADA', 'SO', 'CDR', 'IML'],
+ 'SEXTO CICLO': ['PI1', 'BD', 'ILP', 'CSI', 'SI', 'AE1'],
+ 'SÉTIMO CICLO': ['DP1', 'I2', 'HCD', 'CPD', 'IS', 'AE2'],
+ 'OCTAVO CICLO': ['PI2', 'DP2', 'I3', 'DSW', 'V', 'AE3'],
+ 'NOVENO CICLO': ['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'],
+ 'DÉCIMO CICLO': ['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6']}
+
+
 level_labels = {"Nivel 2": ['A', 'B', 'C'], "Nivel 1": [1, 2, 3, 4], "Nivel 3":['D','E']}
 level_positions = {}
 for level, nodes in level_labels.items():

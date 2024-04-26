@@ -125,6 +125,7 @@ if nivelPresionado:
         cursos = cursosNivel[nivelPresionado]
         for curso in cursos:
             for ind, row in df.iterrows():
+                pres = row[curso]
                 nombre = row['Nombre']
         st.sidebar.write(curso, ":", nombre)
     else:

@@ -109,7 +109,7 @@ G.add_nodes_from(['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'])
 G.add_nodes_from(['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6'])
 
 plt.figure(figsize=(17, 27))
-nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=5000, edge_color='black', linewidths=1, font_size=20)
+nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color='black', linewidths=1, font_size=20)
 
 posicionNivel = {}
 for nivel, nodos in cursosNivel.items():

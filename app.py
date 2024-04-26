@@ -100,7 +100,7 @@ colors_by_edge = {
     ('F', 'CR1'): "black",
     ('CDI', 'CII'): "green",
     ('CDI', 'AMGA'): "black",
-    ('AMGA', 'QG'): "black",
+    ('FP', 'PA'): "black",
     ('FI1', 'FI2'): "red",
     # Agrega más colores para otras aristas según sea necesario
 }

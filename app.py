@@ -51,12 +51,9 @@ def show_authenticated_content():
 
         df = df.iloc[:-2, :]
 
-        #Grafo dirigido en NetworkX: Para saber cuál es la línea que generará un curso base
-        cursos = df[~df['Cursos'].str.contains("Asignaturas", case=False)]['Cursos'].tolist()
-        curso_selec = st.selectbox('- Seleccione el curso a visualizar', cursos)
-        st.write('Curso seleccionado:', curso_selec.capitalize())
+        
 
-        codigo = df.loc[df["Cursos"] == curso_selec, "Código"].values[0]
+   
         G = nx.DiGraph()
         G.add_node(codigo)
         flag = False

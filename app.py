@@ -140,7 +140,7 @@ if nivelPresionado:
                 req_nombre[row['Acrónimo']] = row['Nombre Requisito']
 
             st.sidebar.write(f"**{curso}: {curso_nombre[curso]}**")
-            st.sidebar.write(f"- Tipo: ***{tipo_nombre[curso]}***")
+            st.sidebar.write(f"- Tipo: *{tipo_nombre[curso]}*")
             st.sidebar.write("- Tipo: ", tipo_nombre[curso])
             st.sidebar.write("- Sede: ", sede_nombre[curso])
             st.sidebar.write("- Modalidad: ", modalidad_nombre[curso])

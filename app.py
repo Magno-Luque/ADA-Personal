@@ -33,6 +33,15 @@ nombresNivel = {}
 cursosNivel = {}
 posic = {}
 nombresCiclo = []
+listas = [('C0613', 'C0614'),('C0659', 'C0657'),('C0657', 'C0741'),('C0622', 'C0742'),
+          ('C0201', 'C0208'),('C0614', 'C0513'),('C0667', 'C8274'),('C0741', 'C0743'),
+          ('C0667', 'C0750'),('C0742', 'C0745'),('C0657', 'C0503'),('C8275', 'C8277'),
+          ('C8191', 'C0679'),('C8277', 'C8278'),('C8276', 'C8279'),('C0503', 'C8281'),
+          ('C0679', 'C1330'),('C8277', 'C8282'),('C8279', 'C8283'),('C8279', 'C8284'),
+          ('C8425', 'C8426'),('C0359', 'C8285'),('C8279', 'C8286'),('C0359', 'C8287'),
+          ('C1330', 'C1343'),('C1335', 'C1342'),('C8426', 'C8427'),('C8287', 'C8288'),
+          ('C8285', 'C8289'),('C1343', 'C8290'),('C8427', 'C8428'),('C8287', 'C8291'),
+          ('C8290', 'C8272'),('C8269', 'C8271'),('C8284', 'C8292')]
 
 for index, row in df.iterrows():
     asigCodAcro[row['Código']] = row['Acrónimo']
@@ -72,6 +81,7 @@ G.add_nodes_from(['DP1', 'I2', 'HCD', 'CPD', 'IS', 'AE2'])
 G.add_nodes_from(['PI2', 'DP2', 'I3', 'DSW', 'V', 'AE3'])
 G.add_nodes_from(['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'])
 G.add_nodes_from(['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6'])
+G.add_edges_from(listas)
 
 plt.figure(figsize=(17, 27))
 nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color='black', linewidths=1, font_size=20)
@@ -90,8 +100,8 @@ st.pyplot(plt)
 nivelPresionado = st.sidebar.selectbox("Selecciona un ciclo", nombresCiclo)
 if nivelPresionado:
     st.sidebar.markdown(f"**Información del Nodo {nivelPresionado}:**")
-    if clicked_node in level_labels['Nivel 1']:
+    if nivelPresionado in level_labels['Nivel 1']:
         st.sidebar.write("Información específica del Nodo:")
-    elif clicked_node in level_labels['Nivel 2']:
+    elif nivelPresionado in level_labels['Nivel 2']:
         st.sidebar.write("Información específica del Nodo:")
 st.pyplot(plt)

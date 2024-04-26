@@ -118,12 +118,11 @@ info_por_ciclo = {
     'DÉCIMO CICLO': 'Información específica del Nodo para el décimo ciclo'
 }
 
-nivelPresionado = st.sidebar.selectbox("Selecciona un ciclo", nombresCiclo)
+nivelPresionado = st.sidebar.selectbox("Selecciona el nivel", nombresCiclo)
 if nivelPresionado:
-    st.sidebar.markdown(f"**Información del Nodo {nivelPresionado}:**")
+    st.sidebar.markdown(f"**Información sobre {nivelPresionado}:**")
     if nivelPresionado in info_por_ciclo:
         info_especifica = info_por_ciclo[nivelPresionado]
         st.sidebar.write(info_especifica)
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")
-st.pyplot(plt)

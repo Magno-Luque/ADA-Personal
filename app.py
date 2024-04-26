@@ -127,6 +127,6 @@ if nivelPresionado:
             for ind, row in df.iterrows():
                 pres = row[curso]
                 nombre = row['Nombre']
-        st.sidebar.write(curso, ":", nombre)
+            st.sidebar.write(curso, ":", nombre)
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")

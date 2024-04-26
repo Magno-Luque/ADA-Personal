@@ -89,8 +89,22 @@ G.add_nodes_from(['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'])
 G.add_nodes_from(['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6'])
 G.add_edges_from(listAristas)
 
+coloresPorNivel = {
+    "PRIMER CICLO": "red","SEGUNDO CICLO": "blue",
+    "TERCER CICLO": "red","CUARTO CICLO": "blue",
+    "QUINTO CICLO": "red","SEXTO CICLO": "blue",
+    "SÉTIMO CICLO": "red","OCTAVO CICLO": "blue",
+    "NOVENO CICLO": "red","DECIMO CICLO": "blue",
+}
+
+aristasColors = []
+for edge in G.edges():
+    for level, edges in coloresPorNivel.items():
+        if edge in edges:
+            aristasColors.append(coloresPorNivel[level])
+
 plt.figure(figsize=(17, 27))
-nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color='black', linewidths=1, font_size=20)
+nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color=aristasColors, linewidths=1, font_size=20)
 
 posicionNivel = {}
 for nivel, nodos in cursosNivel.items():

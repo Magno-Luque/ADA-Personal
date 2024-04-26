@@ -70,6 +70,8 @@ def show_authenticated_content():
         st.dataframe(df)
 
         df = df.iloc[:-2, :]
+    
+    
 
         
 

@@ -131,8 +131,7 @@ if nivelPresionado:
                 tipo_nombre[row['Acrónimo']] = row['Tipo']
 
             st.sidebar.write(curso, ":", curso_nombre[curso] )
-            
-            st.sidebar.write("Los cursos obligatorios son: ")
+
             st.sidebar.write("- ", tipo_nombre[curso])
 
     else:

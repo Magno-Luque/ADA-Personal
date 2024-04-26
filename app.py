@@ -98,7 +98,7 @@ coloresPorNivel = {
 }
 colors_by_edge = {
     ('F', 'CR1'): "black",
-    ('CR1', 'CDI'): "black",
+    ('CR1', 'CDI'): "green",
     ('CDI', 'AMGA'): "black",
     ('AMGA', 'QG'): "black",
     ('QG', 'III'): "black",

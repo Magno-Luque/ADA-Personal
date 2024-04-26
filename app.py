@@ -11,7 +11,23 @@ usuarios = {
 }
 
 def main():
+    st.set_page_config(
+        page_title="register",
+        page_icon="school",
+        initial_sidebar_state="expanded",
+    )
 
+    page_bg_img = """
+        <style>
+        [data-testid="stAppViewContainer"] > .main {
+            background-image: url("https://img.freepik.com/foto-gratis/fondo-acuarela-pintada-mano-forma-cielo-nubes_24972-1095.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
     if not st.session_state.get("logged_in", False):
         st.markdown("<h2 style='text-align: center;'>INICIAR SESIÓN</h2>", unsafe_allow_html=True)
         
@@ -39,11 +55,7 @@ def verify_user(username, password):
     return False
 
 def show_authenticated_content():
-    st.set_page_config(
-        page_title="register",
-        page_icon="school",
-        initial_sidebar_state="expanded",
-    )
+
     st.title(f"Bienvenido, {st.session_state.username}!")
     
     def download(archivo):

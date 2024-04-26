@@ -123,10 +123,7 @@ if nivelPresionado:
     st.sidebar.markdown(f"**Información sobre el {nivelPresionado}:**")
     if nivelPresionado in cursosNivel:
         cursos = cursosNivel[nivelPresionado]
-        curso_nombre = {}
-        
         for curso in cursos:
-            nombre = curso_nombre[curso]
             st.sidebar.write(curso)
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")

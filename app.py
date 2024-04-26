@@ -108,7 +108,7 @@ colors_by_edge = {
 aristasColors = []
 
 for nivel, arista in colors_by_edge.items():
-    aristasColors.append(coloresPorNivel[nivel])
+    aristasColors.append(colors_by_edge[nivel])
 
 plt.figure(figsize=(17, 27))
 nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color=aristasColors,width=5, linewidths=1, font_size=20)

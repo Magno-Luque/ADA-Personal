@@ -124,6 +124,6 @@ if nivelPresionado:
     if nivelPresionado in cursosNivel:
         cursos = cursosNivel[nivelPresionado]
         for curso in cursos:
-            st.sidebar.write(curso)
+            st.sidebar.write(curso, ":")
     else:
         st.sidebar.write("Información específica del Nodo no disponible para este ciclo.")

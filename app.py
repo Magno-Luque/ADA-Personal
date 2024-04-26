@@ -69,6 +69,7 @@ asigAcroCod = {}
 nombresNivel = {}
 cursosNivel = {}
 posic = {}
+nombresCiclo = []
 
 for index, row in df.iterrows():
     asigCodAcro[row['Código']] = row['Acrónimo']
@@ -90,6 +91,7 @@ for nombre, ciclo in nombresNivel.items():
 
 for contador, (i, j) in enumerate(cursosNivel.items()):
   c = 1
+  nombresCiclo.append(i)
   if contador % 2==0:
       c += 0.5
   for k in j:
@@ -119,4 +121,14 @@ for nivel, nodos in cursosNivel.items():
 for nivel, posicion in posicionNivel.items():
     plt.text(posicion[0], posicion[1], nivel, rotation=90, fontsize=20, verticalalignment='center', horizontalalignment='center')
 
+st.pyplot(plt)
+
+
+nivelPresionado = st.sidebar.selectbox("Selecciona un ciclo", nombresCiclo)
+if nivelPresionado:
+    st.sidebar.markdown(f"**Información del Nodo {nivelPresionado}:**")
+    if clicked_node in level_labels['Nivel 1']:
+        st.sidebar.write("Información específica del Nodo:")
+    elif clicked_node in level_labels['Nivel 2']:
+        st.sidebar.write("Información específica del Nodo:")
 st.pyplot(plt)

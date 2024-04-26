@@ -4,18 +4,18 @@ import networkx as nx
 import matplotlib.pyplot as plt 
 
 
-st.set_page_config(
-    page_title="register",
-    page_icon="school",
-    initial_sidebar_state="expanded",
-)
-
 usuarios = {
     72439569: "hulk@bb",
     42326885: "loki%=#",
 }
 
 def main():
+    st.set_page_config(
+    page_title="register",
+    page_icon="school",
+    initial_sidebar_state="expanded",
+    )
+
     if not st.session_state.get("logged_in", False):
         st.markdown("<h2 style='text-align: center;'>INICIAR SESIÓN</h2>", unsafe_allow_html=True)
         

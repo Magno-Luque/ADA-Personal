@@ -3,6 +3,13 @@ import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt 
 
+
+st.set_page_config(
+    page_title="register",
+    page_icon="school",
+    initial_sidebar_state="expanded",
+)
+
 usuarios = {
     72439569: "hulk@bb",
     42326885: "loki%=#",
@@ -54,26 +61,10 @@ def show_authenticated_content():
         
 
    
-        G = nx.DiGraph()
+        
 
-        flag = False
-
-        while flag == False:
-            if not df.loc[df["Codigo_del_Requisito"] == codigo, "Código"].empty:
-                descendiente = df.loc[df["Codigo_del_Requisito"] == codigo, "Código"].values[0]
-                G.add_node(descendiente)
-                G.add_edge(codigo, descendiente)
-                codigo = descendiente
-
-            else:
-                pos = nx.spring_layout(G)  
-                fig, ax = plt.subplots(figsize=(10, 6))  
-                nx.draw(G, pos, with_labels=True, node_size=700, node_color="skyblue", font_size=10, ax=ax)  # Dibujar el grafo
-                ax.set_title(f"Grafo del curso de {curso_selec}")  
-                ax.axis('off')  
-                plt.tight_layout()  
-                st.pyplot(fig) 
-                flag = True
+        
+        
 
 if __name__ == "__main__":
     main()

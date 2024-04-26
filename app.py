@@ -91,9 +91,9 @@ G.add_edges_from(listAristas)
 
 coloresPorNivel = {
     "PRIMER CICLO": "red","SEGUNDO CICLO": "blue",
-    "TERCER CICLO": "red","CUARTO CICLO": "blue",
+    "TERCER CICLO": "green","CUARTO CICLO": "magenta",
     "QUINTO CICLO": "red","SEXTO CICLO": "blue",
-    "SÉTIMO CICLO": "red","OCTAVO CICLO": "blue",
+    "SÉTIMO CICLO": "green","OCTAVO CICLO": "magenta",
     "NOVENO CICLO": "red","DECIMO CICLO": "blue",
 }
 

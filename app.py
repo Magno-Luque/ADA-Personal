@@ -89,26 +89,6 @@ G.add_nodes_from(['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'])
 G.add_nodes_from(['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6'])
 G.add_edges_from(listAristas)
 
-coloresPorNivel = {
-    "PRIMER CICLO": "red","SEGUNDO CICLO": "blue",
-    "TERCER CICLO": "green","CUARTO CICLO": "magenta",
-    "QUINTO CICLO": "red","SEXTO CICLO": "blue",
-    "SÉTIMO CICLO": "green","OCTAVO CICLO": "magenta",
-    "NOVENO CICLO": "red","DECIMO CICLO": "blue",
-}
-colors_by_edge = {
-    ('F', 'CR1'): "black",
-    ('CDI', 'CII'): "green",
-    ('CDI', 'AMGA'): "black",
-    ('FP', 'PA'): "black",
-    ('FI1', 'FI2'): "red",
-    # Agrega más colores para otras aristas según sea necesario
-}
-
-aristasColors = []
-
-for nivel, arista in colors_by_edge.items():
-    aristasColors.append(colors_by_edge[nivel])
 
 plt.figure(figsize=(17, 27))
 nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color=aristasColors,width=5, linewidths=1, font_size=20)

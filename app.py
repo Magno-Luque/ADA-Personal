@@ -24,7 +24,7 @@ page_bg_img = """
     </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.dataframe(df, width=1500)
+# st.dataframe(df, width=1500)
 
 #################
 asigCodAcro = {}

@@ -11,9 +11,9 @@ usuarios = {
 
 def main():
     st.set_page_config(
-    page_title="register",
-    page_icon="school",
-    initial_sidebar_state="expanded",
+        page_title="register",
+        page_icon="school",
+        initial_sidebar_state="expanded",
     )
 
     if not st.session_state.get("logged_in", False):

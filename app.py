@@ -108,12 +108,12 @@ G.add_nodes_from(['PI2', 'DP2', 'I3', 'DSW', 'V', 'AE3'])
 G.add_nodes_from(['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'])
 G.add_nodes_from(['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6'])
 
-
+plt.figure(figsize=(17, 27))
 nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=2500, edge_color='black', linewidths=1, font_size=12)
 
 posicionNivel = {}
 for nivel, nodos in cursosNivel.items():
-    y_pos = sum([pos[node][1] for node in nodos]) / len(nodos) 
+    y_pos = sum([posic[node][1] for node in nodos]) / len(nodos) 
     posicionNivel[nivel] = (0.5, y_pos)
 
 for nivel, posicion in posicionNivel.items():

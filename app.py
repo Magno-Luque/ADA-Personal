@@ -42,6 +42,8 @@ listas = [('C0613', 'C0614'),('C0659', 'C0657'),('C0657', 'C0741'),('C0622', 'C0
           ('C1330', 'C1343'),('C1335', 'C1342'),('C8426', 'C8427'),('C8287', 'C8288'),
           ('C8285', 'C8289'),('C1343', 'C8290'),('C8427', 'C8428'),('C8287', 'C8291'),
           ('C8290', 'C8272'),('C8269', 'C8271'),('C8284', 'C8292')]
+listAristas = []
+
 
 for index, row in df.iterrows():
     asigCodAcro[row['Código']] = row['Acrónimo']
@@ -70,6 +72,10 @@ for contador, (i, j) in enumerate(cursosNivel.items()):
     posic[k] = (c, 20 - contador*2)
     c +=1
 
+for tupla in listas:
+    updated_i = (asigCodAcro[tupla[0]], asigCodAcro[tupla[1]]) 
+    listAristas.append(updated_i)
+
 G = nx.DiGraph()
 G.add_nodes_from(['F', 'CR1', 'CDI', 'AMGA', 'QG', 'III'])
 G.add_nodes_from(['CR2', 'CII', 'FI1', 'BI', 'PII', 'FP'])
@@ -81,7 +87,7 @@ G.add_nodes_from(['DP1', 'I2', 'HCD', 'CPD', 'IS', 'AE2'])
 G.add_nodes_from(['PI2', 'DP2', 'I3', 'DSW', 'V', 'AE3'])
 G.add_nodes_from(['DNI', 'E', 'T1', 'I4', 'DSM', 'AE4'])
 G.add_nodes_from(['NRI', 'T2', 'TASI', 'DI', 'AE5', 'AE6'])
-G.add_edges_from(listas)
+G.add_edges_from(listAristas)
 
 plt.figure(figsize=(17, 27))
 nx.draw(G, posic, with_labels=True, node_color='skyblue', node_size=8000, edge_color='black', linewidths=1, font_size=20)
